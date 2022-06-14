@@ -1,0 +1,42 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="JupyterKernelInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="14">
+            <item index="0" class="java.lang.String" itemvalue="fbprophet" />
+            <item index="1" class="java.lang.String" itemvalue="hypergbm" />
+            <item index="2" class="java.lang.String" itemvalue="chinesecalendar" />
+            <item index="3" class="java.lang.String" itemvalue="catboost" />
+            <item index="4" class="java.lang.String" itemvalue="plotly" />
+            <item index="5" class="java.lang.String" itemvalue="dask-ml" />
+            <item index="6" class="java.lang.String" itemvalue="xgboost" />
+            <item index="7" class="java.lang.String" itemvalue="imbalanced-learn" />
+            <item index="8" class="java.lang.String" itemvalue="XlsxWriter" />
+            <item index="9" class="java.lang.String" itemvalue="tensorflow" />
+            <item index="10" class="java.lang.String" itemvalue="numpy" />
+            <item index="11" class="java.lang.String" itemvalue="hypernets" />
+            <item index="12" class="java.lang.String" itemvalue="prophet" />
+            <item index="13" class="java.lang.String" itemvalue="pyparsing" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyTypeCheckerInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="hyperts.experiment.hn_widget" />
+          <option value="hypernets.experiment.compete.hn_widget" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
+    </inspection_tool>
+  </profile>
+</component>
