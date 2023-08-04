@@ -43,7 +43,6 @@ class RevIN(layers.Layer):
         dim2reduce = tuple(range(1, len(x.shape) - 1))
         self.mean = K.stop_gradient(K.mean(x, axis=dim2reduce, keepdims=True))
         self.stdev = K.stop_gradient(K.sqrt(K.var(x, axis=dim2reduce, keepdims=True) + self.eps))
-        print(self.stdev)
 
     def _normalize(self, x):
         x = x - self.mean
@@ -72,10 +71,32 @@ if __name__ == '__main__':
     import tensorflow as tf
 
     x = tf.reshape(tf.range(0, 24), shape=(4, 3, 2))/24
-    layer = RevIN(3)
+    layer = RevIN()
     y = layer(x, mode='norm')
     z = layer(y, mode='denorm')
 
     print(x)
     print(y)
     print(z)
+    print(x.numpy() == z.numpy())
+
+    # import numpy as np
+    # from tensorflow.keras.layers import Input, LSTM, Dense
+    # from tensorflow.keras.models import  Model
+    #
+    # revin_layer = RevIN()
+    #
+    # x=Input(shape=(12, 2))
+    # model=revin_layer(x,mode="norm")
+    #
+    # model2=LSTM(32, return_sequences=False)(model)
+    # output_layer=Dense(2)(model2)
+    # output_layer1=revin_layer(output_layer,mode="denorm")
+    # model1 = Model(inputs=x, outputs=output_layer1)
+    # model1.summary()
+    #
+    # model1.compile(optimizer='Adam', loss='mse')
+    #
+    # x = np.random.randn(16, 12, 2)
+    # y = np.random.randn(16, 2)
+    # model1.fit(x=x, y=y, epochs=10, batch_size=1)
